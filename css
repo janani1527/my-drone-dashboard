@@ -1,0 +1,59 @@
+/* General styling for sidebar */
+.nav-bar {
+    display: flex;
+    flex-direction: column; /* Ensure vertical layout for the sidebar */
+    background-color: #282828;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    height: 100vh; /* Full screen height for the sidebar */
+    width: 200px; /* Sidebar width */
+    position: fixed; /* Fix the sidebar to the left */
+    top: 0;
+    left: 0;
+}
+
+/* Individual link styling */
+.nav-bar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s ease, color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon styling inside links */
+.nav-bar img {
+    width: 24px;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the links */
+.nav-bar a:hover {
+    background-color: #4CAF50;
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Active link (current page) styling */
+.nav-bar a.active {
+    background-color: #cc66ff;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth transition for the icon */
+.nav-bar img:hover {
+    transform: scale(1.2);
+}
+
+/* Body content adjustment to avoid overlap with sidebar */
+body {
+    margin-left: 220px; /* To leave space for the sidebar */
+    padding: 20px;
+}
